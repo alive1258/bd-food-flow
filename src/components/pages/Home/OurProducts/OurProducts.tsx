@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useGetProductsQuery } from '../../../../redux/features/productApi'
 import ProductCard from './ProductCard'
 
@@ -33,7 +34,9 @@ const OurProducts = () => {
           ))}
         </div>
         <div className="flex  justify-center pt-10">
-          <button className="btn ">View All</button>
+          <Link to="/all-supplies">
+            <button className="btn ">View All</button>
+          </Link>
         </div>
       </div>
     </>

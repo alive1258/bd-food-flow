@@ -43,6 +43,14 @@ const AddSuppliesProducts = () => {
           ></input>
         </div>
         <div className="flex flex-col mb-3">
+          <label className="mb-1">Image</label>
+          <input
+            {...register('image', { required: true })}
+            type="text"
+            className="border border-gray-400 rounded-md px-3 py-2"
+          ></input>
+        </div>
+        <div className="flex flex-col mb-3">
           <label className="mb-1">Category</label>
           <input
             {...register('category', { required: true })}
@@ -55,6 +63,14 @@ const AddSuppliesProducts = () => {
           <input
             {...register('quantity', { required: true })}
             type="number"
+            className="border border-gray-400 rounded-md px-3 py-2"
+          ></input>
+        </div>
+        <div className="flex flex-col mb-3">
+          <label className="mb-1">Description</label>
+          <input
+            {...register('description', { required: true })}
+            type="text"
             className="border border-gray-400 rounded-md px-3 py-2"
           ></input>
         </div>

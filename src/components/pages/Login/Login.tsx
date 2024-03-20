@@ -134,13 +134,13 @@ const Login = () => {
                 </div>
               </form>
               <div className="py-4 lg:py-6">
-                <p className="text-center text-xs text-gray-600/95 lg:text-sm">
-                  Don’t have an account?
+                <p className="text-center">
+                  Dont have an account?
                   <Link
-                    className="text-white transition-all hover:text-lwsGreen hover:underline mx-2"
                     to="/register"
+                    className="text-indigo-600 hover:underline"
                   >
-                    Create New
+                    Register
                   </Link>
                 </p>
               </div>
