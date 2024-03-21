@@ -2,59 +2,67 @@ import { useState } from 'react'
 import { FaRegQuestionCircle } from 'react-icons/fa'
 import { FaCircleCheck, FaHandHoldingHeart } from 'react-icons/fa6'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
+import man1 from '../../../../assets/images/donor1.jpeg'
+import questionPic1 from '../../../../assets/images/q4.avif'
+import questionPic2 from '../../../../assets/images/q7.avif'
 
 const AskQuestion = () => {
   const data = [
     {
-      question: 'What is the primary objective or goal of the Event 360?',
+      question: 'How does BD Food Flow maintain food freshness?',
       answer:
-        'The overarching goal of Event 360 is to facilitate meaningful industry collaboration, fostering innovation and knowledge exchange among participants, ultimately advancing the collective understanding of ',
+        'BD Food Flow maintains strict quality control measures and utilizes advanced logistics to ensure that all food products are sourced, stored, and delivered under optimal conditions, guaranteeing freshness.',
     },
     {
-      question: 'Can you provide details events date, time, and location?',
+      question: 'What types of food products does BD Food Flow distribute?',
       answer:
-        ' Event 360 is scheduled to take place on every day. 9am to 11pm, hosted at USA, providing a central and accessible setting for attendees.',
+        'BD Food Flow offers a diverse range of food products including fresh produce, meats, dairy, seafood, dry goods, and specialty items sourced from trusted suppliers.',
+    },
+    {
+      question: 'Can I customize my orders with BD Food Flow?',
+      answer:
+        'Yes, BD Food Flow provides customizable ordering options to meet specific customer needs, including bulk orders, special requests, and tailored delivery schedules.',
     },
 
     {
-      question: 'What is the target audience for Event 360?',
+      question: 'How can I track my orders placed with BD Food Flow?',
       answer:
-        ' Event 360 caters to a diverse audience, including professionals, enthusiasts, and experts in [industry/field], creating an inclusive environment for collaborative learning.',
+        ' BD Food Flow offers a user-friendly online platform or app where customers can track their orders in real-time, providing visibility into the status of deliveries and estimated arrival times.',
     },
     {
-      question: 'Are there any specific  topics  covered during the event?',
+      question: 'What payment methods are accepted by BD Food Flow?',
       answer:
-        ' The event will cover a range of compelling themes such as [list key themes], offering in-depth discussions and insights into the latest trends and challenges in the',
+        'BD Food Flow accepts various payment methods including credit/debit cards, electronic transfers, and invoicing for established corporate accounts, providing flexibility and convenience for customers.',
     },
     {
-      question: 'How can participants register for Event 360?',
+      question: ' How does BD Food Flow handle food safety standards?',
       answer:
-        ' Participants can easily register for Event 360 through [registration platform], ensuring a streamlined and user-friendly experience for all interested attendees.',
+        ' BD Food Flow adheres to stringent food safety protocols and complies with all relevant regulations to ensure the highest standards of quality and safety across its distribution process.',
     },
     {
-      question: ' What are the key features or highlights of the event?',
+      question: 'Where does BD Food Flow provide distribution services?',
       answer:
-        'Key features of Event 360 include engaging panel discussions, interactive workshops, and networking opportunities, providing attendees with a well-rounded and enriching experience.',
+        'BD Food Flow serves a wide geographical area, including urban, suburban, and rural regions, providing comprehensive distribution services tailored to the specific needs of each location.',
     },
     {
-      question: ' Will there be guest speakers  and if so, who are they?',
+      question: 'Is customer support available for BD Food Flow services?',
       answer:
-        ' Event 360 boasts renowned speakers such as [list names], who bring their expertise to the forefront, sharing valuable perspectives on',
+        'Yes, BD Food Flow has a dedicated customer support team available to address any queries, concerns, or issues promptly, ensuring a seamless and satisfactory experience for all customers.',
     },
     {
-      question: ' Are there sponsorship opportunities available ?',
+      question: 'What payment methods does BD Food Flow accept?',
       answer:
-        ' Businesses and organizations have the opportunity to become sponsors of Event 360, gaining visibility and recognition while contributing to the success of this impactful industry gathering.',
+        'BD Food Flow accepts various payment methods including credit/debit cards, electronic transfers, and invoicing for established corporate accounts, providing flexibility and convenience for customers.',
     },
     {
-      question: 'How will evnt ensure a safe  environment for participants?',
+      question: 'Does BD Food Flow offer discounts for bulk orders?',
       answer:
-        'Event 360 is committed to ensuring a safe and inclusive environment through stringent safety protocols, diverse speaker representation, and accessibility features to accommodate all participants.',
+        'Yes, BD Food Flow provides competitive pricing and offers special discounts and promotions for bulk orders, incentivizing larger purchases and fostering long-term partnerships with customers.',
     },
     {
-      question: 'What post-event activities  available for attendees?',
+      question: 'What are the delivery times with BD Food Flow?',
       answer:
-        'After the event, attendees will have access to a curated selection of post-event resources, including session recordings, presentation materials, and exclusive content, extending the learning experience beyond the live event.',
+        'BD Food Flow offers efficient delivery services with flexible scheduling options, ensuring timely delivery of orders to meet customer requirements.',
     },
   ]
 
@@ -72,7 +80,7 @@ const AskQuestion = () => {
     <>
       <div className="md:mt-[178px] mt-[100px] container">
         <div className="text-center ">
-          <h2>FREQALY ASK QUESTION</h2>
+          <h2>Frequently Ask Question</h2>
 
           <p className="mt-3 text-[#566B84] font-normal md;text-[18px]">
             Our Customer Some Frequently Ask Question.
@@ -85,19 +93,19 @@ const AskQuestion = () => {
           <div className="">
             <div className="md:flex">
               {/* event */}
-              <div className="relative z-10 md:top-[340px] top-[400px] md:right-20   bg-white shadow-xl rounded-lg px-2 py-4 md:w-96 w-64">
+              <div className="relative z-10 md:top-[350px] top-[400px] md:right-10   bg-white shadow-xl rounded-lg px-2 py-4 md:w-96 w-64">
                 <div className="flex space-x-3 ">
                   <div>
                     <img
-                      //   src={man2}
+                      src={man1}
                       className="h-14 w-14 rounded-full "
-                      alt=""
+                      alt="questionPic1"
                     />
-                    <FaCircleCheck className="text-[#0B63E5] relative bottom-4" />
+                    <FaCircleCheck className="text-[#023e8a] relative bottom-4" />
                   </div>
                   <div>
                     <h1 className="text-lg font-semibold">Wiliam Jon</h1>
-                    <p>Art Critic</p>
+                    <p>Donar</p>
                   </div>
                 </div>
               </div>
@@ -108,7 +116,7 @@ const AskQuestion = () => {
                     <div>
                       <FaRegQuestionCircle
                         size={25}
-                        className="text-[#ff4d6d]"
+                        className="text-[#023e8a]"
                       />
                     </div>
                     <div>
@@ -124,18 +132,18 @@ const AskQuestion = () => {
               <div>
                 <img
                   className="rounded-lg md:h-96 h-72 inline-block w-full"
-                  //   src={eventPic1}
+                  src={questionPic2}
                   alt=""
                 />
               </div>
               <div className="relative bottom-6 ">
                 <img
                   className="rounded-lg md:h-96 h-72 inline-block w-full"
-                  //   src={eventPic22}
+                  src={questionPic1}
                   alt=""
                 />
                 <div className="bg-white md:block hidden p-4 shadow-lg relative bottom-12 right-12 w-24 rounded-lg">
-                  <FaHandHoldingHeart size={50} className="text-[#0B63E5]" />
+                  <FaHandHoldingHeart size={50} className="text-[#023e8a]" />
                 </div>
               </div>
             </div>
@@ -165,7 +173,7 @@ const AskQuestion = () => {
                       <div
                         className={`flex justify-between ${
                           isOpen[index]
-                            ? 'bg-[#0B63E5] p-2 text-[#ffffff] duration-300'
+                            ? 'bg-[#023e8a] p-2 text-[#ffffff] duration-300 transition-all'
                             : ' hover:bg-[#000] p-2 hover:text-[#ffffff] duration-300'
                         }`}
                       >
@@ -175,7 +183,7 @@ const AskQuestion = () => {
                             {isOpen[index] ? (
                               <FaRegQuestionCircle />
                             ) : (
-                              <FaRegQuestionCircle className="text-[#ff4d6d]" />
+                              <FaRegQuestionCircle className="text-[#023e8a]" />
                             )}
                           </div>
                           <div className="">{item.question}</div>
@@ -185,7 +193,7 @@ const AskQuestion = () => {
                     </label>
                     {/* Displaying answer if question is open */}
                     {isOpen[index] && (
-                      <div className="mt-2 p-2 duration-300">
+                      <div className="mt-2 p-2 duration-300 transition-all">
                         <p>{item.answer}</p>
                       </div>
                     )}
