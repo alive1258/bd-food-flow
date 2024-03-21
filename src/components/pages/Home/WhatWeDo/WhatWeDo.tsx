@@ -6,7 +6,7 @@ import {
   FaPeopleGroup,
   FaUserDoctor,
 } from 'react-icons/fa6'
-import { GiPirateCannon } from 'react-icons/gi'
+import { GiFoodTruck } from 'react-icons/gi'
 import { MdPriceCheck } from 'react-icons/md'
 import food1 from '../../../../assets/images/food2.jpeg'
 import food2 from '../../../../assets/images/food4.jpeg'
@@ -22,38 +22,40 @@ const WhatWeDo = () => {
 
           <p className="mt-3 text-[#566B84] font-normal md:text-[18px]">
             Celebrate culinary excellence with Our Products' seamless food flow,{' '}
-            <br /> ensuring quality & Transform your dining experience with Food{' '}
-            <br />
+            <br /> ensuring quality & Transform your dining experience with BD
+            Food <br />
             Flow Distributor's unparalleled product range
           </p>
         </div>
 
-        <div className="bg-[#e9ecef] mt-48">
+        <div className="bg-[#eff1f3] mt-48">
           <div className="container">
             {/* Vision & Mission */}
             <div className="md:flex relative bottom-24">
               <div className=" bg-[#48cae4] text-[#ffffff] p-6 space-y-3">
                 <h1 className="text-2xl font-semibold">Our Vision</h1>
                 <p>
-                  Curabitur non nulla sit amet nisl tempus convallis quis ac
-                  lectus. Mauris blandit aliquet elit, eget tincidunt nibh
-                  pulvinar a. Vestibulum ac diam sit amet quam vehicula
-                  elementum sed sit amet dui. Sed porttitor lectus nibh. Nulla
-                  quis lorem ut libero malesuada feugiat. Sed porttitor lectus
-                  nibh. Sed porttitor lectus nibh. Cras ultricies ligula sed
-                  magna dictum porta.
+                  BD Food Flow envisions revolutionizing the food industry by
+                  seamlessly connecting producers with consumers through an
+                  efficient and transparent supply chain. We aim to empower
+                  local farmers and producers while providing consumers with
+                  access to fresh, high-quality food products directly from the
+                  source. Our vision encompasses fostering sustainability,
+                  reducing food waste, and enhancing food security for
+                  communities across Bangladesh
                 </p>
               </div>
-              <div className="bg-[#0165ff] text-[#ffffff] p-6 space-y-3">
+              <div className="bg-[#023e8a] text-[#ffffff] p-6 space-y-3">
                 <h1 className="text-2xl font-semibold">Our Mission</h1>
                 <p>
-                  Curabitur non nulla sit amet nisl tempus convallis quis ac
-                  lectus. Mauris blandit aliquet elit, eget tincidunt nibh
-                  pulvinar a. Vestibulum ac diam sit amet quam vehicula
-                  elementum sed sit amet dui. Sed porttitor lectus nibh. Nulla
-                  quis lorem ut libero malesuada feugiat. Sed porttitor lectus
-                  nibh. Sed porttitor lectus nibh. Cras ultricies ligula sed
-                  magna dictum porta.
+                  Our mission at BD Food Flow is to streamline the food
+                  distribution process, leveraging technology to ensure fair
+                  prices for farmers and affordable, high-quality products for
+                  consumers. We are committed to promoting economic empowerment
+                  among local producers and fostering sustainable agricultural
+                  practices throughout Bangladesh. Through our innovative
+                  platform, we strive to create a more resilient and inclusive
+                  food ecosystem, benefiting both producers and consumers alike
                 </p>
               </div>
             </div>
@@ -73,7 +75,7 @@ const WhatWeDo = () => {
 
                     <div className="shadow-xl rounded-lg p-6">
                       <div>
-                        <GiPirateCannon size={40} className="text-[#0165ff]" />
+                        <GiFoodTruck size={40} className="text-[#023e8a]" />
                       </div>
                       <h1 className="text-2xl font-semibold">
                         Food Service Distributors
@@ -97,7 +99,7 @@ const WhatWeDo = () => {
 
                     <div className="shadow-xl rounded-lg p-6">
                       <div>
-                        <FaUserDoctor size={40} className="text-[#0165ff]" />
+                        <FaUserDoctor size={40} className="text-[#023e8a]" />
                       </div>
                       <h1 className="text-2xl font-semibold">
                         Chain Supermarkets
@@ -123,7 +125,7 @@ const WhatWeDo = () => {
                       <div>
                         <FaBuildingCircleCheck
                           size={40}
-                          className="text-[#0165ff]"
+                          className="text-[#023e8a]"
                         />
                       </div>
                       <h1 className="text-2xl font-semibold">
@@ -148,7 +150,7 @@ const WhatWeDo = () => {
 
                     <div className="shadow-xl rounded-lg p-6">
                       <div>
-                        <FaPeopleGroup size={40} className="text-[#0165ff]" />
+                        <FaPeopleGroup size={40} className="text-[#023e8a]" />
                       </div>
                       <h1 className="text-2xl font-semibold">
                         Food Manufacturers & Processors
@@ -172,7 +174,7 @@ const WhatWeDo = () => {
 
                     <div className="shadow-xl rounded-lg p-6">
                       <div>
-                        <MdPriceCheck size={40} className="text-[#0165ff]" />
+                        <MdPriceCheck size={40} className="text-[#023e8a]" />
                       </div>
                       <h1 className="text-2xl font-semibold">Club Stores</h1>
                       <p className="pt-3">
@@ -210,31 +212,30 @@ const WhatWeDo = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="absolute bottom-36">
+                  <div className="absolute bottom-48">
                     <div className="bg-white py-4 px-5 flex space-x-4">
                       <div>
-                        <h1 className="text-xl font-semibold text-[#ef233c]">
+                        <h1 className="text-xl font-semibold text-[#023e8a]">
                           24/7 Hours Service
                         </h1>
                         <p className="text-lg font-medium">99-885-665-2022</p>
                       </div>
                       {/* <FaAmbulance size={50} className="text-[#0165ff]" /> */}
-                      <FaCarSide size={50} className="text-[#0165ff]" />
+                      <FaCarSide size={50} className="text-[#023e8a]" />
                     </div>
                   </div>
                   {/* marquery  */}
-                  <div className="relative bottom-2">
+                  <div className="relative ">
                     <div className="text-2xl bg-[#48cae4] py-4 text-white">
                       <Marquee speed={30}>
-                        The hospital's emergency services provide critical and
-                        immediate medical care to individuals experiencing
-                        sudden illness or injury. Staffed with skilled medical
-                        professionals, these services offer swift assessment,
-                        treatment, and stabilization to patients in urgent need,
-                        ensuring timely and efficient care during emergencies.
-                        Accessible 24/7, the emergency department is equipped to
-                        handle a wide range of medical conditions, prioritizing
-                        patient well-being and rapid intervention
+                        BD Food Flow's mission is to streamline food
+                        distribution, ensuring fair prices for farmers and
+                        affordable, high-quality products for consumers. Through
+                        technology, we empower local producers, foster
+                        sustainable practices, and create a resilient food
+                        ecosystem. Our vision is to revolutionize the industry,
+                        connecting producers with consumers for sustainability
+                        and enhanced food security in Bangladesh.
                       </Marquee>
                     </div>
                   </div>
