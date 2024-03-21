@@ -1,3 +1,27 @@
+import gallery1 from '../../../../assets/gallery/g1.jpg'
+import gallery10 from '../../../../assets/gallery/g11.jpeg'
+import gallery11 from '../../../../assets/gallery/g12.webp'
+import gallery12 from '../../../../assets/gallery/g13.avif'
+import gallery13 from '../../../../assets/gallery/g14.jpeg'
+import gallery14 from '../../../../assets/gallery/g16.jpg'
+import gallery15 from '../../../../assets/gallery/g17.webp'
+import gallery16 from '../../../../assets/gallery/g19.jpeg'
+import gallery2 from '../../../../assets/gallery/g2.jpg'
+import gallery17 from '../../../../assets/gallery/g20.jpeg'
+import gallery18 from '../../../../assets/gallery/g21.jpeg'
+import gallery19 from '../../../../assets/gallery/g22.jpeg'
+import gallery20 from '../../../../assets/gallery/g23.jpeg'
+import gallery21 from '../../../../assets/gallery/g24.jpeg'
+import gallery22 from '../../../../assets/gallery/g25.jpeg'
+import gallery23 from '../../../../assets/gallery/g26.jpeg'
+import gallery3 from '../../../../assets/gallery/g3.jpeg'
+import gallery4 from '../../../../assets/gallery/g4.jpeg'
+import gallery5 from '../../../../assets/gallery/g5.jpeg'
+import gallery6 from '../../../../assets/gallery/g6.jpg'
+import gallery7 from '../../../../assets/gallery/g7.jpg'
+import gallery8 from '../../../../assets/gallery/g8.jpeg'
+import gallery9 from '../../../../assets/gallery/g9.jpeg'
+
 import './Gallery.css'
 
 const Gallery = () => {
@@ -8,10 +32,11 @@ const Gallery = () => {
           <h2>Community Impact Gallery</h2>
 
           <p className="mt-3 text-[#566B84] font-normal md:text-[18px]">
-            Celebrate culinary excellence with Our Products' seamless food flow,{' '}
-            <br /> ensuring quality & Transform your dining experience with Food{' '}
-            <br />
-            Flow Distributor's unparalleled product range
+            Explore the power of community through our Impact Gallery,{' '}
+            showcasing the <br /> meaningful projects and initiatives that
+            enrich lives . Discover how collective
+            <br /> efforts create a lasting positive impact in our shared
+            spaces.
           </p>
         </div>
         {/* donor  */}
@@ -20,79 +45,79 @@ const Gallery = () => {
 
         <div className="gallery pt-14">
           <div className="image-container">
-            <img src="1.jpg" />
+            <img src={gallery1} />
           </div>
           <div className="image-container">
-            <img src="2.jpg" />
+            <img src={gallery2} />
           </div>
           <div className="image-container tall">
-            <img src="3.jpg" />
+            <img src={gallery3} />
           </div>
           <div className="image-container">
-            <img src="4.jpg" />
+            <img src={gallery4} />
           </div>
           <div className="image-container">
-            <img src="5.jpg" />
+            <img src={gallery5} />
           </div>
           <div className="image-container tall">
-            <img src="6.jpg" />
+            <img src={gallery6} />
           </div>
           <div className="image-container">
-            <img src="7.jpg" />
+            <img src={gallery7} />
           </div>
           <div className="image-container">
-            <img src="8.jpg" />
+            <img src={gallery8} />
           </div>
           <div className="image-container">
-            <img src="9.jpg" />
+            <img src={gallery9} />
           </div>
           <div className="image-container">
-            <img src="10.jpg" />
+            <img src={gallery10} />
           </div>
           <div className="image-container tall">
-            <img src="11.jpg" />
+            <img src={gallery11} />
           </div>
           <div className="image-container tall">
-            <img src="12.jpg" />
+            <img src={gallery12} />
           </div>
           <div className="image-container">
-            <img src="13.jpg" />
+            <img src={gallery13} />
           </div>
           <div className="image-container">
-            <img src="14.jpg" />
+            <img src={gallery14} />
           </div>
           <div className="image-container tall">
-            <img src="15.jpg" />
+            <img src={gallery14} />
           </div>
           <div className="image-container tall">
-            <img src="16.jpg" />
+            <img src={gallery14} />
           </div>
           <div className="grid-item">
-            <img src="17.jpg" />
+            <img src={gallery15} />
           </div>
           <div className="image-container tall">
-            <img src="18.jpg" />
+            <img src={gallery16} />
           </div>
           <div className="image-container tall">
-            <img src="19.jpg" />
+            <img src={gallery17} />
           </div>
           <div className="image-container tall">
-            <img src="20.jpg" />
+            <img src={gallery18} />
           </div>
           <div className="image-container">
-            <img src="21.jpg" />
+            <img src={gallery19} />
           </div>
           <div className="image-container tall">
-            <img src="22.jpg" />
+            <img src={gallery20} />
           </div>
           <div className="image-container">
-            <img src="23.jpg" />
+            <img src={gallery21} />
           </div>
           <div className="image-container">
-            <img src="24.jpg" />
+            <img src={gallery22} />
           </div>
           <div className="image-container">
-            <img src="25.jpg" />
+            <img src={gallery23} />
           </div>
         </div>
       </div>

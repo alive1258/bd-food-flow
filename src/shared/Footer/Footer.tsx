@@ -135,8 +135,8 @@ const Footer = () => {
               <div className="pt-4 pb-4 flex justify-center items-center flex-wrap">
                 <div>
                   <p className="text-white">
-                    © Copyright {currentYear}, All Rights Reserved by Global
-                    Academia
+                    © Copyright {currentYear}, All Rights Reserved by BD Food
+                    Flow
                   </p>
                 </div>
               </div>

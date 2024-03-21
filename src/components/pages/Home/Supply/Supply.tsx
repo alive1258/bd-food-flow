@@ -1,8 +1,7 @@
-import { FaUserDoctor } from 'react-icons/fa6'
-import { IoIosPeople } from 'react-icons/io'
 import { LuCalendarDays } from 'react-icons/lu'
-import { MdOutlineManageAccounts } from 'react-icons/md'
 
+import { FaCarSide } from 'react-icons/fa'
+import { FaPeopleRoof } from 'react-icons/fa6'
 import './supply.css'
 
 const OurAchievement = () => {
@@ -10,56 +9,54 @@ const OurAchievement = () => {
     <>
       <div className="pt-40">
         <div className="drGroupPic bg-fixed h-[450px]">
-          <div className="px-6 md:pt-44 pt-20 bg-black bg-opacity-50 h-full">
+          <div className="px-6 md:pt-44 pt-20 bg-black bg-opacity-60 h-full">
             <div className="container">
-              <div className="md:flex space-y-4 justify-between ">
+              <div className="md:flex space-y-4 justify-between item-center">
                 {/* Satisfied patients */}
-                <div className="flex space-x-3 ">
-                  <IoIosPeople className="text-[#0165ff] text-[60px]" />
-                  <div className="border-r-2 border-[#0165ff]"></div>
+                <div className="flex space-x-3 md:pt-3">
+                  <FaCarSide size={50} className="text-[#023e8a] text-[60px]" />
+
+                  <div className="border-r-4 border-[#023e8a]"></div>
                   <div className="text-white ">
                     <p className="md:text-3xl text-2xl font-semibold"></p>
-                    <h2 className="text-2xl font-semibold text-white">
-                      Satisfied patients{' '}
+                    <h2 className="text-2xl font-semibold text-white pt-3">
+                      Trusted Food Distributor{' '}
                     </h2>
                   </div>
                 </div>
                 {/* Years of experience */}
                 <div className="flex space-x-3">
-                  <LuCalendarDays size={60} className="text-[#0165ff] " />
-                  <div className="border-r-2 border-[#0165ff]"></div>
+                  <LuCalendarDays size={60} className="text-[#023e8a] " />
+                  <div className="border-r-4 border-[#023e8a]"></div>
                   <div className="text-white ">
                     <p className="md:text-3xl text-2xl font-semibold"> </p>
-                    <h2 className="text-lg font-semibold">
-                      Years of experience{' '}
+                    <h2 className="text-2xl font-semibold text-white pt-3">
+                      Years of Quality Service
                     </h2>
                   </div>
                 </div>
                 {/* Successful surgeries */}
                 <div className="flex space-x-3">
-                  <MdOutlineManageAccounts
-                    size={60}
-                    className="text-[#0165ff] "
-                  />
-                  <div className="border-r-2 border-[#0165ff]"></div>
+                  <FaPeopleRoof size={60} className="text-[#023e8a]" />
+                  <div className="border-r-4 border-[#023e8a]"></div>
                   <div className="text-white ">
                     <p className="md:text-3xl text-2xl font-semibold"> </p>
-                    <h2 className="text-lg font-semibold">
-                      Successful surgeries
+                    <h2 className="text-2xl font-semibold text-white pt-3">
+                      Experienced Food Partner
                     </h2>
                   </div>
                 </div>
                 {/* Specialist doctors */}
-                <div className="flex space-x-3">
+                {/* <div className="flex space-x-3">
                   <FaUserDoctor size={60} className="text-[#0165ff] " />
                   <div className="border-r-2 border-[#0165ff]"></div>
                   <div className="text-white ">
                     <p className="md:text-3xl text-2xl font-semibold"> </p>
-                    <h2 className="font-semibold text-lg">
+                    <h2 className="text-2xl font-semibold text-white">
                       Specialist doctors
                     </h2>
                   </div>
-                </div>
+                </div> */}
                 {/* Working Hours */}
                 {/* <div className="flex space-x-3">
                   <GoStopwatch size={60} className="text-[#0165ff] " />
