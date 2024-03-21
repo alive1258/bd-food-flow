@@ -117,6 +117,7 @@ import './Navbar.css'
 const Navbar = () => {
   const [open, setOpen] = useState(false)
   const { auth } = useAuth()
+  console.log(auth?.email)
 
   const topFunction = () => {
     setOpen(!open)
@@ -138,11 +139,10 @@ const Navbar = () => {
               <img className="w-16" src={ffLogo} alt="logo" />
             </NavLink>
             <div className="flex space-x-2 text-3xl font-bold">
+              <h1>BD</h1>
+              <h1 className="text-[#023e8a] font-bold">Food</h1>
               <h1>
-                <span className="">F</span>ood{' '}
-              </h1>
-              <h1>
-                <span className="text-[#023e8a] font-bold">Flow</span>
+                <span>Flow</span>
               </h1>
             </div>
           </div>
@@ -201,6 +201,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
             )}
+
             {/* 023e8a */}
             {auth ? (
               <Logout />

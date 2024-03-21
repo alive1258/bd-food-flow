@@ -1,10 +1,9 @@
 import axios from 'axios'
-import { FieldError, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import loginPic from '../../../assets/images/auth_illustration.png'
 import { useAuth } from '../../../hooks/useAuth'
-import Field from '../../../shared/common/Field'
 
 interface FormData {
   email: string
@@ -77,62 +76,44 @@ const Login = () => {
             {/* <!-- illustration and title ends --> */}
             {/* <!-- login form --> */}
             <div className="card">
-              <form onSubmit={handleSubmit(submitForm)}>
-                <div className="mb-6">
-                  <Field
-                    label="Email"
-                    htmlFor="email"
-                    error={errors.email as FieldError} // Cast errors.email to FieldError
-                  >
-                    <input
-                      {...register('email', {
-                        required: 'Email ID is Required',
-                      })}
-                      className={`auth-input ${
-                        errors.email ? 'border-red-500' : 'border-white/20'
-                      }`}
-                      type="email"
-                      name="email"
-                      id="email"
-                    />
-                  </Field>
+              <form
+                onSubmit={handleSubmit(submitForm)}
+                className="shadow-xl p-5 rounded-lg mt-8"
+              >
+                {/* Input field for title */}
+                <div className="flex flex-col mb-3">
+                  <label className="mb-1">Email</label>
+                  <input
+                    {...register('email', { required: true })}
+                    type="text"
+                    className="border border-gray-400 rounded-md px-3 py-2"
+                  ></input>
                 </div>
-                <div className="mb-6">
-                  <Field
-                    label="Password"
-                    error={errors.password as FieldError} // Cast errors.password to FieldError
-                  >
-                    <input
-                      {...register('password', {
-                        required: 'Password is required',
-                        minLength: {
-                          value: 8,
-                          message:
-                            'Your password must be at least 8 characters',
-                        },
-                      })}
-                      className={`auth-input ${
-                        errors.password ? 'border-red-500' : 'border-white/20'
-                      }`}
-                      type="password"
-                      name="password"
-                      id="password"
-                    />
-                  </Field>
-                  <p>{errors?.root?.random?.message}</p>
+                <div className="flex flex-col mb-3">
+                  <label className="mb-1">Password</label>
+                  <input
+                    type="password"
+                    {...register('password', {
+                      required: 'Password is required',
+                      minLength: {
+                        value: 8,
+                        message: 'Your password must be at least 8 characters',
+                      },
+                    })}
+                    className="border border-gray-400 rounded-md px-3 py-2"
+                  ></input>
                 </div>
 
-                <div className="mb-6">
-                  <Field>
-                    <button
-                      type="submit"
-                      className="w-full bg-indigo-600 text-white p-3 rounded-md hover:bg-indigo-700 transition-all duration-200"
-                    >
-                      Login
-                    </button>
-                  </Field>
-                </div>
+                {errors.exampleRequired && <span>This field is required</span>}
+                {/* Submit button */}
+                <button
+                  type="submit"
+                  className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                >
+                  Submit
+                </button>
               </form>
+
               <div className="py-4 lg:py-6">
                 <p className="text-center">
                   Dont have an account?

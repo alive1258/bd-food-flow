@@ -1,5 +1,11 @@
+import AllProducts from '../AllProducts/AllProducts'
+
 const AllSupplies = () => {
-  return <div>AllSupplies</div>
+  return (
+    <>
+      <AllProducts />
+    </>
+  )
 }
 
 export default AllSupplies
