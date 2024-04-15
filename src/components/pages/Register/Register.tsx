@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCreateRegisterUserMutation } from "../../../redux/features/userApi";
 import { toast } from "sonner";
 
@@ -40,45 +40,54 @@ const Register = () => {
   };
 
   return (
-    <div className="container w-3/4 mt-10 shadow-md p-16">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex flex-col mb-3">
-          <label className="mb-1">Name</label>
-          <input
-            {...register("name", { required: true })}
-            type="text"
-            className="border border-gray-400 rounded-md px-3 py-2"
-          />
+    <div className="container w-1/2 pt-20  p-16 h-screen">
+      <div className="shadow-xl p-6 dark:bg-slate-900 rounded-lg">
+        <h2 className="text-center">Register Now</h2>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="flex flex-col mb-3">
+            <label className="mb-1">Name</label>
+            <input
+              {...register("name", { required: true })}
+              type="text"
+              className="border border-gray-400 rounded-md px-3 py-2"
+            />
+          </div>
+          <div className="flex flex-col mb-3">
+            <label className="mb-1">Email</label>
+            <input
+              {...register("email", { required: true })}
+              type="text"
+              className="border border-gray-400 rounded-md px-3 py-2"
+            />
+          </div>
+          <div className="flex flex-col mb-3">
+            <label className="mb-1">Password</label>
+            <input
+              type="password"
+              {...register("password", {
+                required: "Password is required",
+                minLength: {
+                  value: 8,
+                  message: "Your password must be at least 8 characters",
+                },
+              })}
+              className="border border-gray-400 rounded-md px-3 py-2"
+            />
+          </div>
+          <button
+            type="submit"
+            className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+          >
+            Submit
+          </button>
+        </form>
+        <div className="text-center">
+          Already have account?{" "}
+          <Link to="/login" className="text-indigo-600 hover:underline">
+            Login
+          </Link>
         </div>
-        <div className="flex flex-col mb-3">
-          <label className="mb-1">Email</label>
-          <input
-            {...register("email", { required: true })}
-            type="text"
-            className="border border-gray-400 rounded-md px-3 py-2"
-          />
-        </div>
-        <div className="flex flex-col mb-3">
-          <label className="mb-1">Password</label>
-          <input
-            type="password"
-            {...register("password", {
-              required: "Password is required",
-              minLength: {
-                value: 8,
-                message: "Your password must be at least 8 characters",
-              },
-            })}
-            className="border border-gray-400 rounded-md px-3 py-2"
-          />
-        </div>
-        <button
-          type="submit"
-          className="bg-blue-500 text-white px-4 py-2 rounded-lg"
-        >
-          Submit
-        </button>
-      </form>
+      </div>
     </div>
   );
 };
