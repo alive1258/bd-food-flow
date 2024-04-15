@@ -4,9 +4,9 @@
 
 This project aims to develop a comprehensive Disaster Relief Donation Platform using React, Redux for state management, RTK Query for efficient data fetching, and React Router DOM for navigation. The platform serves as a vital tool for coordinating and managing the distribution of food and essential supplies to communities in need during disasters, ensuring accessibility to nutritious meals and basic necessities.
 
-## Live Deployment Link:
+## Live Deployment Link: https://foodflow-ten.vercel.app/
 
-## Video Showcasing Inventory Management Dashboard:https://drive.google.com/file/d/1YRARDho90rmGW5JGPzO0X7n7gaI9RAHs/view?usp=sharing
+## Video Showcasing BD Food Flow: https://drive.google.com/file/d/1wyzSXUAjNaY_Pgf8s491F9W_0AUrVqtb/view?usp=sharing
 
 ## Technologies Used
 

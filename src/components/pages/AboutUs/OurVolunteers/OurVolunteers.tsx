@@ -12,7 +12,7 @@ const OurVolunteers = () => {
   }
 
   return (
-    <div className="container pt-40 h-screen">
+    <div className="container pt-40 ">
       <h2 className="text-center">Our Volunteers</h2>
       <div className="grid pt-20 lg:grid-cols-4 gap-5 md:grid-cols-3 grid-cols-2">
         {data?.map((volunteer) => {
