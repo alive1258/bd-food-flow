@@ -1,20 +1,25 @@
+import { ReactNode } from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
-import { useAuth } from '../hooks/useAuth'
+import { getUserinfo } from '../services/auth.services'
 
-const PrivetRoute = ({ children }) => {
-  const { auth, loading } = useAuth()
-  const location = useLocation()
-
-  if (loading) {
-    return <p>Loading...</p>
-  }
-  if (auth) {
-    return children
-  }
-  return <Navigate to="/login" state={{ from: location }} replace></Navigate>
-  //   if (!auth) {
-  //     return <Navigate to="/login" state={{ from: location }} replace />
-  //   }
+interface Props {
+  children: ReactNode
 }
 
-export default PrivetRoute
+const PrivateRoute = ({ children }: Props) => {
+  const userInfo = getUserinfo()
+  // const { auth, initialized } = useAuth()
+  const location = useLocation()
+
+  // if (!initialized) {
+  //   return <p>Loading...</p>
+  // }
+
+  if (userInfo) {
+    return <>{children}</>
+  }
+
+  return <Navigate to="/login" state={{ from: location }} replace />
+}
+
+export default PrivateRoute

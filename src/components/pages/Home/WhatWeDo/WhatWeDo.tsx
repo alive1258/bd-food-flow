@@ -1,34 +1,36 @@
-import Marquee from 'react-fast-marquee'
+import Marquee from "react-fast-marquee";
 // import { FaAmbulance } from 'react-icons/fa'
-import { FaCarSide } from 'react-icons/fa'
+import { FaCarSide } from "react-icons/fa";
 import {
   FaBuildingCircleCheck,
   FaPeopleGroup,
   FaUserDoctor,
-} from 'react-icons/fa6'
-import { GiFoodTruck } from 'react-icons/gi'
-import { MdPriceCheck } from 'react-icons/md'
-import food1 from '../../../../assets/images/food2.jpeg'
-import food2 from '../../../../assets/images/food4.jpeg'
-import food3 from '../../../../assets/images/food4.png'
+} from "react-icons/fa6";
+import { GiFoodTruck } from "react-icons/gi";
+import { MdPriceCheck } from "react-icons/md";
+import food1 from "../../../../assets/images/food2.jpeg";
+import food2 from "../../../../assets/images/food4.jpeg";
+import food3 from "../../../../assets/images/food4.png";
 // import food3 from '../../../../assets/images/food4.jpeg'
 // import food4 from '../../../../assets/images/food4.jpeg'
+import { motion } from "framer-motion";
+
 const WhatWeDo = () => {
   return (
     <>
-      <div className="md:mt-[180px] mt-[100px]">
-        <div className="text-center ">
+      <div className="md:mt-[180px] mt-[100px] border-b  dark:border-gray-600 border-gray-200">
+        <div className="text-center container">
           <h2>What We Do</h2>
 
-          <p className="mt-3 text-[#566B84] font-normal md:text-[18px]">
-            Celebrate culinary excellence with Our Products' seamless food flow,{' '}
+          <p className="mt-3 font-normal md:text-[18px]">
+            Celebrate culinary excellence with Our Products' seamless food flow,{" "}
             <br /> ensuring quality & Transform your dining experience with BD
             Food <br />
             Flow Distributor's unparalleled product range
           </p>
         </div>
 
-        <div className="bg-[#eff1f3] mt-48">
+        <div className="bg-gray-100 dark:bg-black mt-48">
           <div className="container">
             {/* Vision & Mission */}
             <div className="md:flex relative bottom-24">
@@ -65,7 +67,7 @@ const WhatWeDo = () => {
                 <div className="space-y-6 h-[570px] overflow-y-scroll p-4">
                   {/* Food Service Distributors */}
                   <div className="flex space-x-6">
-                    <div>
+                    <div className="hidden md:block">
                       <div className="bg-[#48cae4] -rotate-45 h-16 w-16 flex justify-center items-center rounded-es-3xl rounded-ss-3xl rounded-se-3xl">
                         <h1 className="rotate-45 text-white font-bold text-lg">
                           1
@@ -73,7 +75,7 @@ const WhatWeDo = () => {
                       </div>
                     </div>
 
-                    <div className="shadow-xl rounded-lg p-6">
+                    <div className="shadow-xl dark:bg-slate-900 rounded-lg p-6">
                       <div>
                         <GiFoodTruck size={40} className="text-[#023e8a]" />
                       </div>
@@ -89,7 +91,7 @@ const WhatWeDo = () => {
                   </div>
                   {/* Chain Supermarkets */}
                   <div className="flex space-x-6">
-                    <div>
+                    <div className="hidden md:block">
                       <div className="bg-[#48cae4] -rotate-45 h-16 w-16 flex justify-center items-center rounded-es-3xl rounded-ss-3xl rounded-se-3xl">
                         <h1 className="rotate-45 text-white font-bold text-lg">
                           2
@@ -97,7 +99,7 @@ const WhatWeDo = () => {
                       </div>
                     </div>
 
-                    <div className="shadow-xl rounded-lg p-6">
+                    <div className="shadow-xl rounded-lg p-6 dark:bg-slate-900">
                       <div>
                         <FaUserDoctor size={40} className="text-[#023e8a]" />
                       </div>
@@ -113,7 +115,7 @@ const WhatWeDo = () => {
                   </div>
                   {/* Independent Grocers*/}
                   <div className="flex space-x-6">
-                    <div>
+                    <div className="hidden md:block">
                       <div className="bg-[#48cae4] -rotate-45 h-16 w-16 flex justify-center items-center rounded-es-3xl rounded-ss-3xl rounded-se-3xl">
                         <h1 className="rotate-45 text-white font-bold text-lg">
                           3
@@ -121,7 +123,7 @@ const WhatWeDo = () => {
                       </div>
                     </div>
 
-                    <div className="shadow-xl rounded-lg p-6">
+                    <div className="shadow-xl rounded-lg p-6 dark:bg-slate-900">
                       <div>
                         <FaBuildingCircleCheck
                           size={40}
@@ -140,7 +142,7 @@ const WhatWeDo = () => {
                   </div>
                   {/* Food Manufacturers & Processors*/}
                   <div className="flex space-x-6">
-                    <div>
+                    <div className="hidden md:block">
                       <div className="bg-[#48cae4] -rotate-45 h-16 w-16 flex justify-center items-center rounded-es-3xl rounded-ss-3xl rounded-se-3xl">
                         <h1 className="rotate-45 text-white font-bold text-lg">
                           4
@@ -148,7 +150,7 @@ const WhatWeDo = () => {
                       </div>
                     </div>
 
-                    <div className="shadow-xl rounded-lg p-6">
+                    <div className="shadow-xl rounded-lg p-6 dark:bg-slate-900">
                       <div>
                         <FaPeopleGroup size={40} className="text-[#023e8a]" />
                       </div>
@@ -164,7 +166,7 @@ const WhatWeDo = () => {
                   </div>
                   {/* Club Stores*/}
                   <div className="flex space-x-6">
-                    <div>
+                    <div className="hidden md:block">
                       <div className="bg-[#48cae4] -rotate-45 h-16 w-16 flex justify-center items-center rounded-es-3xl rounded-ss-3xl rounded-se-3xl">
                         <h1 className="rotate-45 text-white font-bold text-lg">
                           5
@@ -172,7 +174,7 @@ const WhatWeDo = () => {
                       </div>
                     </div>
 
-                    <div className="shadow-xl rounded-lg p-6">
+                    <div className="shadow-xl rounded-lg p-6 dark:bg-slate-900">
                       <div>
                         <MdPriceCheck size={40} className="text-[#023e8a]" />
                       </div>
@@ -190,21 +192,51 @@ const WhatWeDo = () => {
                   <div>
                     <div className="grid md:grid-rows-4 md:grid-flow-col gap-4">
                       <div className="row-span-4 ">
-                        <img
+                        <motion.img
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{
+                            opacity: 1,
+                            scale: 1,
+                            transition: {
+                              duration: 1,
+                              ease: "easeInOut",
+                            },
+                          }}
+                          viewport={{ once: false }}
                           className="h-full w-full rounded-lg"
                           src={food1}
                           alt=""
                         />
                       </div>
                       <div className="row-span-2  ">
-                        <img
+                        <motion.img
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{
+                            opacity: 1,
+                            scale: 1,
+                            transition: {
+                              duration: 1,
+                              ease: "easeInOut",
+                            },
+                          }}
+                          viewport={{ once: false }}
                           className="h-full w-full rounded-lg"
                           src={food2}
                           alt=""
                         />
                       </div>
                       <div className="row-span-2 ">
-                        <img
+                        <motion.img
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{
+                            opacity: 1,
+                            scale: 1,
+                            transition: {
+                              duration: 1.5,
+                              ease: "easeInOut",
+                            },
+                          }}
+                          viewport={{ once: false }}
                           className="h-full w-full rounded-lg"
                           src={food3}
                           alt=""
@@ -213,15 +245,18 @@ const WhatWeDo = () => {
                     </div>
                   </div>
                   <div className="absolute bottom-48">
-                    <div className="bg-white py-4 px-5 flex space-x-4">
+                    <div className="bg-white dark:bg-slate-900 py-4 px-5 flex space-x-4">
                       <div>
-                        <h1 className="text-xl font-semibold text-[#023e8a]">
+                        <h1 className="text-xl font-semibold dark:text-white text-[#023e8a]">
                           24/7 Hours Service
                         </h1>
                         <p className="text-lg font-medium">99-885-665-2022</p>
                       </div>
                       {/* <FaAmbulance size={50} className="text-[#0165ff]" /> */}
-                      <FaCarSide size={50} className="text-[#023e8a]" />
+                      <FaCarSide
+                        size={50}
+                        className="text-[#023e8a] dark:text-white"
+                      />
                     </div>
                   </div>
                   {/* marquery  */}
@@ -246,7 +281,7 @@ const WhatWeDo = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default WhatWeDo
+export default WhatWeDo;

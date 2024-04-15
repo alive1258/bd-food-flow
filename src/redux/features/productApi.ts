@@ -1,83 +1,62 @@
-// import { baseApi } from '../allApi/baseApi'
-// import type { Pokemon } from './types'
+import { baseApi } from "../allApi/baseApi";
 
-// export const productApi = baseApi.injectEndpoints({
-//   endpoints: builder => ({
-//     getProducts: builder.query<Pokemon, string>({
-//       query: () => ({
-//         url: '/products',
-//         method: 'GET',
-//       }),
-//       providesTags: ['products'],
-//     }),
-//     createProduct: builder.mutation<Pokemon, string>({
-//       query: body => ({
-//         url: '/products',
-//         method: 'POST',
-//         body,
-//       }),
-//       invalidatesTags: ['products'],
-//     }),
-
-//   deleteProduct: builder.mutation<Pokemon, string>({
-//     query: (id) => ({
-//       url: `/products/${id}`,
-//       method: 'DELETE',
-//     }),
-//   }),
-// })
-
-// export const { useGetProductsQuery, useCreateProductMutation,useDeleteProductMutation } = productApi
-// //  default productApi.reducer
-
-import { baseApi } from '../allApi/baseApi'
-import type { Pokemon } from './types'
+interface ProductResponse {
+  _id: string;
+  title: string;
+  quantity: string;
+  category: string;
+  image: string;
+  description: string;
+  acknowledged: boolean;
+}
 
 export const productApi = baseApi.injectEndpoints({
-  endpoints: builder => ({
-    getProducts: builder.query<Pokemon[], string>({
+  endpoints: (builder) => ({
+    getProducts: builder.query<ProductResponse[], string>({
       query: () => ({
-        url: '/products',
-        method: 'GET',
+        url: "/products",
+        method: "GET",
       }),
-      providesTags: ['products'],
+      providesTags: ["products"],
     }),
 
-    getSingleProduct: builder.query<Pokemon[], string>({
-      query: id => ({
+    getSingleProduct: builder.query<ProductResponse, string>({
+      query: (id) => ({
         url: `/products/${id}`,
-        method: 'GET',
+        method: "GET",
       }),
-      // providesTags: ['products'],
     }),
 
-    createProduct: builder.mutation<Pokemon, Partial<Pokemon>>({
-      query: body => ({
-        url: '/products',
-        method: 'POST',
+    createProduct: builder.mutation<ProductResponse, Partial<ProductResponse>>({
+      query: (body) => ({
+        url: "/products",
+        method: "POST",
         body,
       }),
-      invalidatesTags: ['products'],
+      invalidatesTags: ["products"],
     }),
 
-    updateProduct: builder.mutation<void, string>({
+    updateProduct: builder.mutation<
+      ProductResponse,
+      { id: string; body: Partial<ProductResponse> }
+    >({
       query: ({ id, body }) => ({
         url: `/products/${id}`,
-        method: 'PUT',
+        method: "PUT",
         body,
       }),
-      invalidatesTags: ['products'],
+      invalidatesTags: ["products"],
     }),
 
-    deleteProduct: builder.mutation<void, string>({
-      query: id => ({
+    deleteProduct: builder.mutation<ProductResponse, string>({
+      query: (id) => ({
         url: `/products/${id}`,
-        method: 'DELETE',
+        method: "DELETE",
       }),
-      invalidatesTags: ['products'],
+      invalidatesTags: ["products"],
     }),
   }),
-})
+});
 
 export const {
   useGetProductsQuery,
@@ -85,4 +64,4 @@ export const {
   useDeleteProductMutation,
   useUpdateProductMutation,
   useGetSingleProductQuery,
-} = productApi
+} = productApi;

@@ -1,23 +1,23 @@
-import { AiFillYoutube, AiTwotonePhone } from 'react-icons/ai'
-import { BiLogoLinkedin } from 'react-icons/bi'
-import { BsInstagram } from 'react-icons/bs'
-import { FaFacebookF } from 'react-icons/fa'
-import { GoLocation } from 'react-icons/go'
-import { Link } from 'react-router-dom'
-import logoPic from '../../assets/images/ffLogo.png'
+import { AiFillYoutube, AiTwotonePhone } from "react-icons/ai";
+import { BiLogoLinkedin } from "react-icons/bi";
+import { BsInstagram } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
+import { GoLocation } from "react-icons/go";
+import { Link } from "react-router-dom";
+import logoPic from "../../assets/images/ffLogo.png";
 const Footer = () => {
   const topFunction = () => {
-    document.body.scrollTop = 0
-    document.documentElement.scrollTop = 0
-  }
-  const currentYear = new Date().getFullYear()
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+  const currentYear = new Date().getFullYear();
   return (
     <>
-      <div className="bg-black mt-20">
-        <div className=" text-white md:pb-2 pb-20 pt-14">
+      <div className="bg-white dark:bg-black dark:text-white border-t  dark:border-gray-600 border-gray-200 mt-20">
+        <div className=" dark:text-white md:pb-2 pb-10 pt-14">
           <div className="container ">
             <div className="py-6">
-              <div className="grid border-b md:grid-cols-2 grid-cols-1 gap-2  pb-8">
+              <div className="grid border-b dark:border-gray-600 border-gray-200 md:grid-cols-2 grid-cols-1 gap-2  pb-8">
                 <div>
                   <div className="flex items-center gap-2">
                     <Link to="/">
@@ -43,7 +43,7 @@ const Footer = () => {
 
                     {/* -------email------  */}
                     <div className="flex gap-4 pt-6">
-                      <p className="text-white">Follow us on:</p>
+                      <p className="dark:text-white">Follow us on:</p>
 
                       <div className=" bg-[#28589c] hover:scale-125 cursor-pointer duration-300 text-white h-8 w-8 rounded-full flex items-center justify-center">
                         <FaFacebookF className="" />
@@ -63,9 +63,7 @@ const Footer = () => {
                 <div>
                   <div className="grid md:grid-cols-3 grid-cols-1 md:pt-6 gap-4">
                     <div>
-                      <p className="text-2xl font-bold pb-6 text-white">
-                        Get To Know Us
-                      </p>
+                      <p className="text-2xl font-bold pb-6 ">Get To Know Us</p>
                       <div className="space-y-2 text-[16px] font-medium cursor-pointer">
                         <div>
                           <Link onClick={topFunction} to="/">
@@ -87,20 +85,18 @@ const Footer = () => {
                       </div>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold pb-6 text-white">
+                      <p className="text-2xl font-bold pb-6 ">
                         Let Us Help You
                       </p>
                       <div className="space-y-2 text-[16px] font-medium cursor-pointer">
                         <p>100% Prime Food </p>
                         <p>Ongoing Support </p>
                         <p>On time Delivery </p>
-                        <p> Trusted Partner </p>
+                        <p>Trusted Partner </p>
                       </div>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold pb-6 text-white">
-                        Contact Us
-                      </p>
+                      <p className="text-2xl font-bold pb-6 ">Contact Us</p>
                       <div className="space-y-4">
                         {/* -------phone------  */}
                         <div className="flex items-center gap-2">
@@ -110,9 +106,9 @@ const Footer = () => {
                             data-aos-duration="1500"
                             className="bg-[#023e8a] h-10 w-10 rounded-full flex justify-center items-center"
                           >
-                            <AiTwotonePhone className="" size={25} />
+                            <AiTwotonePhone className="text-white" size={25} />
                           </div>
-                          <div className="text-[16px] font-medium">
+                          <div className="text-[16px] font-medium ">
                             <p>0179-3636735</p>
                           </div>
                         </div>
@@ -120,7 +116,7 @@ const Footer = () => {
                         {/* -------location------  */}
                         <div className="flex items-center gap-2">
                           <div className="bg-[#023e8a] h-10 w-10 rounded-full flex justify-center items-center">
-                            <GoLocation className="" size={25} />
+                            <GoLocation className="text-white" size={25} />
                           </div>
                           <div className="text-[16px] font-medium">
                             <p>Dhaka</p>
@@ -132,9 +128,9 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className="pt-4 pb-4 flex justify-center items-center flex-wrap">
+              <div className="pt-4  flex justify-center items-center flex-wrap">
                 <div>
-                  <p className="text-white">
+                  <p className="dark:text-white">
                     © Copyright {currentYear}, All Rights Reserved by BD Food
                     Flow
                   </p>
@@ -145,7 +141,7 @@ const Footer = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

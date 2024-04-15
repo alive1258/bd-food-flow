@@ -23,9 +23,9 @@
 
 @layer base {
   html {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   h2 {
-    @apply text-[#061C3D] md:text-5xl text-2xl font-extrabold;
+    @apply md:text-5xl text-2xl font-extrabold;
   }
 }

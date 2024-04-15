@@ -1,23 +1,23 @@
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 
-import { BiSolidQuoteRight } from 'react-icons/bi'
+import { BiSolidQuoteRight } from "react-icons/bi";
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
-} from 'react-icons/md'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
-import donor1 from '../../../../assets/images/donor1.jpeg'
-import donor2 from '../../../../assets/images/donor2.jpeg'
-import donor3 from '../../../../assets/images/donor3.jpeg'
-import donor4 from '../../../../assets/images/donor4.jpeg'
-import donor5 from '../../../../assets/images/donor5.jpeg'
-import donor6 from '../../../../assets/images/donor6.jpeg'
+} from "react-icons/md";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import donor1 from "../../../../assets/images/donor1.jpeg";
+import donor2 from "../../../../assets/images/donor2.jpeg";
+import donor3 from "../../../../assets/images/donor3.jpeg";
+import donor4 from "../../../../assets/images/donor4.jpeg";
+import donor5 from "../../../../assets/images/donor5.jpeg";
+import donor6 from "../../../../assets/images/donor6.jpeg";
 
 const TopDonor = () => {
   return (
@@ -26,16 +26,16 @@ const TopDonor = () => {
         <div className="text-center ">
           <h2>Top Donor</h2>
 
-          <p className="mt-3 text-[#566B84] font-normal md:text-[18px]">
-            Celebrate culinary excellence with Our Products' seamless food flow,{' '}
-            <br /> ensuring quality & Transform your dining experience with Food{' '}
+          <p className="mt-3  font-normal md:text-[18px]">
+            Celebrate culinary excellence with Our Products' seamless food flow,{" "}
+            <br /> ensuring quality & Transform your dining experience with Food{" "}
             <br />
             Flow Distributor's unparalleled product range
           </p>
         </div>
         {/* donor  */}
         <div>
-          <div className="flex space-x-4 mb-4 justify-end pr-4">
+          <div className="flex space-x-4 mb-4 justify-end pr-4 md:pt-0 pt-6">
             <div className="custom-prev-button ">
               <MdOutlineKeyboardArrowLeft className="text-2xl duration-300 bg-gray-300 hover:bg-[#023e8a] hover:text-white text-[#023e8a] h-10 w-10 rounded-full" />
             </div>
@@ -49,8 +49,8 @@ const TopDonor = () => {
               slidesPerView={1}
               spaceBetween={10}
               navigation={{
-                nextEl: '.custom-next-button',
-                prevEl: '.custom-prev-button',
+                nextEl: ".custom-next-button",
+                prevEl: ".custom-prev-button",
               }}
               // pagination={{
               //   clickable: true,
@@ -74,7 +74,7 @@ const TopDonor = () => {
             >
               {/* donr 1 */}
               <SwiperSlide className="py-5">
-                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff]">
+                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff] dark:bg-slate-900">
                   <div className="flex justify-end w-full pr-4">
                     <BiSolidQuoteRight className="text-[#023e8a] " size={40} />
                   </div>
@@ -109,7 +109,7 @@ const TopDonor = () => {
               </SwiperSlide>
               {/* donr2  */}
               <SwiperSlide className="py-5">
-                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff]">
+                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff] dark:bg-slate-900">
                   <div className="flex justify-end w-full pr-4">
                     <BiSolidQuoteRight className="text-[#023e8a] " size={40} />
                   </div>
@@ -142,7 +142,7 @@ const TopDonor = () => {
               </SwiperSlide>
               {/* donr3  */}
               <SwiperSlide className="py-5">
-                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff]">
+                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff] dark:bg-slate-900">
                   <div className="flex justify-end w-full pr-4">
                     <BiSolidQuoteRight className="text-[#023e8a] " size={40} />
                   </div>
@@ -177,7 +177,7 @@ const TopDonor = () => {
               </SwiperSlide>
               {/* donr 4 */}
               <SwiperSlide className="py-5">
-                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff]">
+                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff] dark:bg-slate-900">
                   <div className="flex justify-end w-full pr-4">
                     <BiSolidQuoteRight className="text-[#023e8a] " size={40} />
                   </div>
@@ -210,7 +210,7 @@ const TopDonor = () => {
               </SwiperSlide>
               {/* dont =r 5  */}
               <SwiperSlide className="py-5">
-                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff]">
+                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff] dark:bg-slate-900">
                   <div className="flex justify-end w-full pr-4">
                     <BiSolidQuoteRight className="text-[#023e8a] " size={40} />
                   </div>
@@ -241,9 +241,9 @@ const TopDonor = () => {
                   </div>
                 </div>
               </SwiperSlide>
-              {/* donr 6  */}
+              {/* donor6  */}
               <SwiperSlide className="py-5">
-                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff]">
+                <div className="rounded  overflow-hidden shadow-lg bg-[#ffffff] dark:bg-slate-900">
                   <div className="flex justify-end w-full pr-4">
                     <BiSolidQuoteRight className="text-[#023e8a] " size={40} />
                   </div>
@@ -279,7 +279,7 @@ const TopDonor = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default TopDonor
+export default TopDonor;

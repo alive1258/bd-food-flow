@@ -1,85 +1,77 @@
-// export default
-import axios from 'axios'
-import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { useCreateRegisterUserMutation } from "../../../redux/features/userApi";
+import { toast } from "sonner";
 
-// RegistrationForm component for user registration
+type Inputs = {
+  name: string;
+  email: string;
+  password: string;
+};
+
 const Register = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  // Hook for managing form state
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    setError,
-  } = useForm()
+  const { register, handleSubmit } = useForm<Inputs>();
 
-  // Function to handle form submission
-  const submitForm = async formData => {
-    console.log(formData)
+  const [createRegisterUser] = useCreateRegisterUserMutation();
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
-      const response = await axios.post(
-        `${import.meta.env.VITE_SERVER_BASE_URL}/api/v1/register`,
-        formData
-      )
+      const res = await createRegisterUser(data);
+      if ("error" in res) {
+        // Handle error
+        console.error("Error during Register:", res.error);
+      } else {
+        // Handle success
+        if (res?.data?.success) {
+          toast.success("Register successful!");
 
-      if (response.status === 201) {
-        // Show success message and redirect to login page
-        toast.success('Registration successful!', {
-          position: toast.TOP_RIGHT,
-        })
-        navigate('/login')
+          navigate("/login");
+        } else {
+          // Handle invalid response
+          console.error("Invalid response:", res);
+        }
       }
     } catch (error) {
-      // Set error message for form field
-      setError('root.random', {
-        type: 'random',
-        message: `Something went wrong: ${error.message}`,
-      })
+      // Handle network errors or other exceptions
+      console.error("Error during Register:", error);
     }
-  }
+  };
+
   return (
-    <>
-      <form
-        onSubmit={handleSubmit(submitForm)}
-        className="container w-3/4 mt-10 shadow-md p-6"
-      >
-        {/* Input field for title */}
+    <div className="container w-3/4 mt-10 shadow-md p-16">
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-col mb-3">
           <label className="mb-1">Name</label>
           <input
-            {...register('name', { required: true })}
+            {...register("name", { required: true })}
             type="text"
             className="border border-gray-400 rounded-md px-3 py-2"
-          ></input>
+          />
         </div>
         <div className="flex flex-col mb-3">
           <label className="mb-1">Email</label>
           <input
-            {...register('email', { required: true })}
+            {...register("email", { required: true })}
             type="text"
             className="border border-gray-400 rounded-md px-3 py-2"
-          ></input>
+          />
         </div>
         <div className="flex flex-col mb-3">
           <label className="mb-1">Password</label>
           <input
             type="password"
-            {...register('password', {
-              required: 'Password is required',
+            {...register("password", {
+              required: "Password is required",
               minLength: {
                 value: 8,
-                message: 'Your password must be at least 8 characters',
+                message: "Your password must be at least 8 characters",
               },
             })}
             className="border border-gray-400 rounded-md px-3 py-2"
-          ></input>
+          />
         </div>
-
-        {errors.exampleRequired && <span>This field is required</span>}
-        {/* Submit button */}
         <button
           type="submit"
           className="bg-blue-500 text-white px-4 py-2 rounded-lg"
@@ -87,64 +79,8 @@ const Register = () => {
           Submit
         </button>
       </form>
-      {/* <form
-        onSubmit={handleSubmit(submitForm)}
-        className="container w-3/4 mt-10 shadow-md p-6"
-      >
-        <Field label="First Name" error={errors.firstName}>
-          <input
-            {...register('name', {
-              required: 'First Name is Required',
-            })}
-            className={`auth-input ${
-              errors.name ? 'border-red-500' : 'border-white/20'
-            }`}
-            type="text"
-            name="name"
-            id="name"
-          />
-        </Field>
+    </div>
+  );
+};
 
-        <Field label="Email" error={errors.email}>
-          <input
-            {...register('email', { required: 'Email ID is Required' })}
-            className={`auth-input ${
-              errors.email ? 'border-red-500' : 'border-white/20'
-            }`}
-            type="email"
-            name="email"
-            id="email"
-          />
-        </Field>
-        <Field label="Password" error={errors.password}>
-          <input
-            {...register('password', {
-              required: 'Password is required',
-              minLength: {
-                value: 8,
-                message: 'Your password must be at least 8 characters',
-              },
-            })}
-            className={`auth-input ${
-              errors.password ? 'border-red-500' : 'border-white/20'
-            }`}
-            type="password"
-            name="password"
-            id="password"
-          />
-        </Field>
-        <p>{errors?.root?.random?.message}</p>
-        <div className="mb-6">
-          <button
-            type="submit"
-            className="w-full bg-indigo-600 text-white p-3 rounded-md hover:bg-indigo-700 transition-all duration-200"
-          >
-            Create Account
-          </button>
-        </div>
-      </form> */}
-    </>
-  )
-}
-
-export default Register
+export default Register;

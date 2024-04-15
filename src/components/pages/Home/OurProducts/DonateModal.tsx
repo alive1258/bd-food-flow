@@ -1,33 +1,41 @@
-import { useForm } from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
-import { useCreateProductMutation } from '../../../../redux/features/productApi'
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { useCreateProductMutation } from "../../../../redux/features/productApi";
+import { getUserinfo } from "../../../../services/auth.services";
 
 type Inputs = {
-  title: string
-  category: string
-  quantity: number
-}
+  name: string;
+  email: string;
+  title: string;
+  category: string;
+  quantity: string;
+  image: string;
+  description: string;
+};
 
-const DonateModal = ({ onClose }) => {
+const DonateModal = ({ onClose }: { onClose: () => void }) => {
+  const userInfo = getUserinfo();
+  console.log(userInfo);
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<Inputs>()
+  } = useForm<Inputs>();
 
-  const [createProduct] = useCreateProductMutation()
-  const navigate = useNavigate()
-  const onSubmit: SubmitHandler<Inputs> = (data: Inputs) => {
+  const [createProduct] = useCreateProductMutation();
+  const navigate = useNavigate();
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
     const modifyData = {
       ...data,
-      quantity: parseInt(data?.quantity),
-    }
-    createProduct(modifyData)
+      quantity: data.quantity.toString(), // Convert quantity to string
+    };
+    createProduct(modifyData);
 
-    reset()
-    navigate('/dashboard')
-  }
+    reset();
+    navigate("/dashboard");
+  };
 
   return (
     <>
@@ -48,51 +56,103 @@ const DonateModal = ({ onClose }) => {
               className="shadow-xl p-5 rounded-lg"
             >
               {/* Input fields for the form */}
+              <div className="flex space-x-3">
+                <div className="flex flex-col mb-3 w-full">
+                  <label className="mb-1 text-slate-400 text-lg">
+                    Donor Name
+                  </label>
+                  <input
+                    {...register("name", { required: true })}
+                    type="text"
+                    className="border dark:bg-slate-900 border-gray-400 rounded-md px-3 py-2"
+                  />
+                  {errors.name && (
+                    <span className="text-red-500">Name is required</span>
+                  )}
+                </div>
+                <div className="flex flex-col mb-3 w-full">
+                  <label className="mb-1 text-slate-400 text-lg">Email</label>
+                  <input
+                    defaultValue={userInfo?.email || ""}
+                    readOnly
+                    {...register("email", { required: true })}
+                    type="text"
+                    className="border dark:bg-slate-900 border-gray-400 rounded-md px-3 py-2"
+                  />
+                  {errors.email && (
+                    <span className="text-red-500">Email is required</span>
+                  )}
+                </div>
+              </div>
+
               <div className="flex flex-col mb-3">
-                <label className="mb-1">Title</label>
+                <label className="mb-1 text-slate-400 text-lg">Title</label>
                 <input
-                  {...register('title', { required: true })}
+                  {...register("title", { required: true })}
                   type="text"
-                  className="border border-gray-400 rounded-md px-3 py-2"
+                  className="border dark:bg-slate-900 border-gray-400 rounded-md px-3 py-2"
                 />
+                {errors.title && (
+                  <span className="text-red-500">Title is required</span>
+                )}
               </div>
               <div className="flex flex-col mb-3">
-                <label className="mb-1">Image</label>
+                <label className="mb-1 text-slate-400 text-lg">Image</label>
                 <input
-                  {...register('image', { required: true })}
+                  {...register("image", { required: true })}
                   type="text"
-                  className="border border-gray-400 rounded-md px-3 py-2"
-                ></input>
-              </div>
-              <div className="flex flex-col mb-3">
-                <label className="mb-1">Category</label>
-                <input
-                  {...register('category', { required: true })}
-                  type="text"
-                  className="border border-gray-400 rounded-md px-3 py-2"
+                  className="border dark:bg-slate-900 border-gray-400 rounded-md px-3 py-2"
                 />
+                {errors.image && (
+                  <span className="text-red-500">Image is required</span>
+                )}
+              </div>
+              <div className="flex space-x-3">
+                <div className="flex flex-col mb-3 w-full">
+                  <label className="mb-1 text-slate-400 text-lg">
+                    Category
+                  </label>
+                  <input
+                    {...register("category", { required: true })}
+                    type="text"
+                    className="border dark:bg-slate-900 border-gray-400 rounded-md px-3 py-2"
+                  />
+                  {errors.category && (
+                    <span className="text-red-500">Category is required</span>
+                  )}
+                </div>
+                <div className="flex flex-col mb-3 w-full">
+                  <label className="mb-1 text-slate-400 text-lg">
+                    Quantity
+                  </label>
+                  <input
+                    {...register("quantity", { required: true })}
+                    type="text"
+                    className="border dark:bg-slate-900 border-gray-400 rounded-md px-3 py-2"
+                  />
+                  {errors.quantity && (
+                    <span className="text-red-500">Quantity is required</span>
+                  )}
+                </div>
               </div>
               <div className="flex flex-col mb-3">
-                <label className="mb-1">Quantity</label>
+                <label className="mb-1 text-slate-400 text-lg">
+                  Description
+                </label>
                 <input
-                  {...register('quantity', { required: true })}
+                  {...register("description", { required: true })}
                   type="text"
-                  className="border border-gray-400 rounded-md px-3 py-2"
+                  className="border dark:bg-slate-900 border-gray-400 rounded-md px-3 py-2"
                 />
+                {errors.description && (
+                  <span className="text-red-500">Description is required</span>
+                )}
               </div>
-              <div className="flex flex-col mb-3">
-                <label className="mb-1">Description</label>
-                <input
-                  {...register('description', { required: true })}
-                  type="text"
-                  className="border border-gray-400 rounded-md px-3 py-2"
-                ></input>
-              </div>
-              {errors.exampleRequired && <span>This field is required</span>}
+
               {/* Submit button */}
               <button
                 type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                className="bg-[#023e8a] text-white px-4 py-2 rounded-lg"
               >
                 Submit
               </button>
@@ -101,7 +161,7 @@ const DonateModal = ({ onClose }) => {
         </section>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default DonateModal
+export default DonateModal;
